@@ -8,27 +8,35 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f2c446;
- color:#33063b
+    background-color: #cccccc;
+ color:#0d0d0e
 }
 /*cabeçalho*/
 header {
-    background-color: #ed34b3;
+    background-color: #96dbe6;
     padding: 20px;
     text-align: center;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    max-width:70%;
+    margin: 30px auto;
 }
+
 /*menu de navegação*/
 nav {
-    background-color:aquamarine;
+    background-color: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+
 }
-display: flex;
-justify-content: center;
-gap: 30px;
-padding: 15px;
 
 .menu a {
-color: #ed344d;
-text-decoration: none;
+color: #000000;
+text-decoration: underline;
+font-weight: bold;
 }
 /*conteúdo principal*/
 main {
@@ -40,19 +48,29 @@ main {
 }
 /* banner*/
 .banner {
-    background-color: #34d4ed;
+    background-color: #96dbe6;
     text-align: center;
-    padding: 60px 20px;
+    padding: 30px 5px;
     margin-bottom: 30px;
+    border-radius: 30px;
+    max-width: 70%;
+    margin: 30px auto;
 }
 .banner h2 {
     margin-bottom: 15px;
 }
 /*seção de produtos*/
-.produtos h2 {
+.produtos {
     text-align: center;
     padding: 20px;
+}
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 30px; /* opcional, da espaço em relação aos produtos abaixo */
 
+}
+.produtos h2 {
+    text-align: center;
 }
 /*div que organiza os produtos*/
 .lista-produtos {
@@ -63,7 +81,7 @@ main {
 }
 /*cartão de produto*/
 .produto {
-    background-color: #6e2f78;
+    background-color: #f6f7f3;
     padding: 15px;
     width: 300px;
 border-radius: 10px;
@@ -71,8 +89,11 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 /*imagem do produto*/
 .produto img {
-    width: 100%;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 5px;
+
 }
 /*nome do produto*/
 .produto p {
@@ -89,6 +110,8 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
 
 }
 /*efeito hover no botao de compra*/
@@ -98,36 +121,53 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 /*seção de sobre*/
 .sobre {
-    background-color: rgb(243, 131, 131);
+    background-color: rgb(255, 252, 252);
     margin-top: 30px;
-    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 70%;
+    max-width: 1100px;
+    margin: 30px auto;
     text-align: center;
 
 }
 .sobre h2 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
-/*seção de contato*/
+/* seção de contato */
 .contato {
-    background-color:#33063b;
-    padding: 40px 20px;
+    background-color: #96dbe6;
     margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 70%;
+    max-width: 1100px;
+    margin: 30px auto;
     text-align: center;
 
 }
-.contato h2 {
-    margin-bottom: 15px;
 
+.contato h2 {
+    margin: 0 !important;
+}
+
+.contato p {
+    margin: 0 !important;
 }
 /*rodapé*/
 footer {
-    background-color:rgb(50, 161, 180);
+    background-color: rgb(50, 161, 180);
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-
+    padding: 10px;
+    margin: 30px auto 0;
+    width: 60%;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
+
 /*modal*/
 .modal {
     display: none;
@@ -162,4 +202,89 @@ float: right;
 font-size: 28px;
 font-weight: bold;
 cursor: pointer;
+}
+*/
+/*formulario de contato*/
+#contato {
+    background-color:#aaa;
+    padding: 40px;
+ margin-top: 30px;
+ text-align: center;
+}
+#contato h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*formulario de contato*/
+#contato form {
+    max-width: 600px;
+    margin: auto;
+}
+
+/*texto dos campos do formulario*/
+#contato label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+/*area da mensagem*/
+#contato textarea {
+    resize: vertical;
+    width: 100%;
+    height: 70px;
+}
+
+/*deixa o nome bonito*/
+
+#contato input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: white;
+
+}
+
+   /* ASSUNTO */
+
+   #contato select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: white;
+}
+
+/*MENSAGEM*/
+
+#contato textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: vertical;
+}
+
+
+/*botao*/
+#contato button {
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 5px; 
+    border: none; 
+    border-radius: 8px;
+    background-color: #39939d; 
+    color: white; 
+    font-size: 15px;
+    cursor: pointer; 
 }
