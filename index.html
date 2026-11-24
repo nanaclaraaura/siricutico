@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!-- faz a pagina se adaptar a largura do celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o arquivo css-->
+        <link rel="stylesheet" href="style.css">
+    
+    <!-- LINK PARA O ARQUIVO CSS-->
+        <title>site de compras</title>
+</head>
+<body>
+    <header>
+    <!-- CABEÇALHO DO SITE -->
+<!--DIV QUE CONTEM O NOME DA LOJA-->
+<div class="logo">
+    <h1>Minha loja</h1>
+    
+
+    <p>produtos para você</p>
+</div>
+</header>
+<nav>
+    <!-- A tag <a> cria um link. 
+        href define o endereço para onde o usuário será direcionado.
+       target="_blank" abre o link em uma nova aba -->
+    <div class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+   </div>
+   <!-- grupo da direita do menu: tema e carrinho -->
+    <div class="acoes">
+    <!-- botao que liga e desliga o modo escuro (o java controla) -->
+    <button id="botao-tema" class="botao-secundario"
+    type="button">modo escuro</button>
+    <!-- CARRINHO -->
+     <p class="carrinho">
+        carrinho: <span id="contador-carrinho">0</span> item(ns)
+<span id="total-carrinho">R$ 0,00</span>
+    </p>      
+    </div>
+</nav>
+<!-- conteudo principal do site-->
+<main>
+    <!-- Seção inicial-->
+     <section id="inicio">
+        <div class="banner">
+            <h2> Bem-vindo à loja</h2>
+            <p> confira nossos produtos
+            </p>
+        </div>
+     </section>
+     <!-- Seção de produtos -->
+     <section id="produtos">
+         <h2> Nossos Produtos</h2>
+    <!-- produto 1 <article> representa um item independente (um cartao de produto) data-id="1" : guarda o numero do produto o javascript le esse valor pra saber qual produto foi clicado -->
+        <div class="lista-produtos">
+        <article class="produto" data-id="1">
+        
+<img src="https://i.pinimg.com/736x/5c/33/a8/5c33a8ce3e9c7a40298bed4e4ecd72e8.jpg"
+            alt="Produto 1 - Pato"
+            >
+            <h3> pato</h3>
+            <p class="preco"> 
+                R$ 15,00</p>
+                <div class="botoes">
+                    <button class="botao-comprar" type="button" data-id="1">Comprar</button>
+                    <button class="botao-detalhes botao-secundario" type="button" data-id="1">Detalhes</button>
+        
+                </div>
+                </article>
+
+                 <article class="produto" data-id="2">
+        
+<img src="https://i.pinimg.com/736x/92/e2/7f/92e27f38164a927c0935c37ba8f39b3c.jpg"
+            alt="Produto 2 - Pelúcia de Raposa"
+            >
+            <h3> Pelúcia de Raposa</h3>
+            <p class="preco"> 
+                R$ 30,00</p>
+                <div class="botoes">
+                    <button class="botao-comprar" type="button" data-id="2">Comprar</button>
+                    <button class="botao-detalhes botao-secundario" type="button" data-id="2">Detalhes</button>
+        
+                </div>
+                </article>
+
+                <article class="produto" data-id="3">
+        
+<img src="https://i.pinimg.com/1200x/c5/f4/b0/c5f4b02d8ad38aa304171e12da021893.jpg"
+            alt="Produto 3 - Tamagotchi"
+            >
+            <h3> Tamagotchi</h3>
+            <p class="preco"> 
+                R$ 100,00</p>
+                <div class="botoes">
+                    <button class="botao-comprar" type="button" data-id="3">Comprar</button>
+                    <button class="botao-detalhes botao-secundario" type="button" data-id="3">Detalhes</button>
+        
+                </div>
+                </article>
+
+                <article class="produto" data-id="4">
+        
+<img src="https://i.pinimg.com/736x/fa/d3/b4/fad3b410d68adb9b44feb8a4f5c61749.jpg"
+            alt="Produto 4 - Chaveiro"
+            >
+            <h3> Chaveiro</h3>
+            <p class="preco"> 
+                R$ 50,00</p>
+                <div class="botoes">
+                    <button class="botao-comprar" type="button" data-id="4">Comprar</button>
+                    <button class="botao-detalhes botao-secundario" type="button" data-id="4">Detalhes</button>
+        
+                </div>
+                </article>
+</div>
+                
+
+        <!--div com todos os produtos-->
+       
+     </section>
+ 
+<!-- Seção sobre a loja-->
+<section id="sobre">
+    <div class="sobre">
+<h2> Sobre a loja</h2>
+<p> Somos uma loja especializada em brinquedos, itens colecionáveis e presentes criativos para todas as idades. Confira nosso catálogo e compre com segurança! </p>
+    </div>
+</section>
+<!-- Seção de contato -->
+ <section id="contato">
+    <div class="contato">
+        <h2> Contato</h2>
+        <p>
+            email: kasanetetoaura@vocaloid.com
+        </p>
+
+    </div>
+ </section>
+ <!-- SEÇÃO DE CONTATO FORMULÁRIO -->
+ <section id="formulario" class="contato">
+    <h2>
+        Entre em contato
+    </h2>
+        <!-- campo para o nome -->
+<form>
+    <!-- campo para o nome -->
+     <label for="nome" >Nome:</label>
+    <input type="text"
+    id="nome"
+    name="nome"
+    placeholder="Digite seu nome"
+    required>
+    <!-- campo para o telefone -->
+      <label for="telefone" >Telefone:</label>
+    <input type="text"
+    id="telefone"
+    name="telefone"
+    placeholder="Digite seu telefone (00) 00000-0000"
+    required>
+     <!-- campo para o email -->
+       <label for="email" >Email:</label>
+    <input type="email"
+    id="email"
+    name="email"
+    placeholder="Digite seu email"
+    required>
+    <!-- campo para escolher o assunto -->
+     <label for="assunto">Assunto</label>
+     <select id="assunto" name="assunto">
+        <option value="duvida">dúvida</option>
+                <option value="produto">produto</option>
+
+                        <option value="comprar">comprar</option>
+        <option value="outro">outro</option>
+
+     </select>
+     <!-- campo de mensagem -->
+      <label for="mensagem">Mensagem</label>
+      <textarea
+        id="mensagem"
+        name="mensagem"
+        rows="5"
+        placeholder="Digite sua mensagem"
+        required>
+      </textarea>
+      <!-- botao de enviar -->
+      <button type="submit">
+        Enviar mensagem
+      </button>
+    </form>
+  </section>
+</main>
+
+<!-- JANELA MODAL DE DETALHES -->
+<div id="modal-detalhes" class="modal">
+    <div class="modal-content">
+        <span id="fechar-modal" class="fechar">&times;</span>
+        <img id="modal-img" src="" alt="Imagem do produto">
+        <h3 id="modal-titulo"></h3>
+        <p id="modal-descricao"></p>
+    </div>
+</div>
+
+<!-- FOOTER SEMPRE FORA DA MAIN-->
+<!-- FOOTER -->
+ <footer>
+<div class="rodape">
+    <p>
+        &copy; Minha loja - Todos os direitos reservados
+    </p>
+</div>
+ </footer>
+
+<!-- SCRIPT DO JAVA-->
+    <script>
+        console.log("Bem-vindo à minha loja!");
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
