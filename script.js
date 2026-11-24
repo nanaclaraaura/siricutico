@@ -27,6 +27,16 @@ botoesComprar.forEach(function(botao) {
 
         document.getElementById("contador-carrinho").textContent = quantidade;
         document.getElementById("total-carrinho").textContent = "R$ " + total.toFixed(2).replace(".", ",");
+
+        // Mostra a notificação com o nome do brinquedo adicionado
+        const nomeProduto = cartao.querySelector("h3").textContent;
+        const notificacao = document.getElementById("notificacao-carrinho");
+        notificacao.textContent = nomeProduto + " adicionado ao carrinho!";
+        notificacao.classList.add("mostrar");
+
+        setTimeout(function() {
+            notificacao.classList.remove("mostrar");
+        }, 2500);
     });
 });
 
@@ -66,13 +76,3 @@ botoesDetalhes.forEach(function(botao) {
 fecharModal.addEventListener("click", function() {
     modal.style.display = "none";
 });
-
-     // Mostra a notificação com o nome do brinquedo adicionado
-     const nomeProduto = cartao.querySelector("h3").textContent;
-     const notificacao = document.getElementById("notificacao-carrinho");
-     notificacao.textContent = nomeProduto + " adicionado ao carrinho!";
-     notificacao.classList.add("mostrar");
-
-     setTimeout(function() {
-         notificacao.classList.remove("mostrar");
-     }, 2500);
