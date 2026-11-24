@@ -416,3 +416,23 @@ body.tema-escuro .modal-content {
     background-color: #1e1e1e;
     color: #f4f4f9;
 }
+
+/* Notificação flutuante do carrinho */
+.notificacao {
+    visibility: hidden;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 20px;
+    position: fixed;
+    z-index: 2000;
+    bottom: 20px;
+    right: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.notificacao.mostrar {
+    visibility: visible;
+}
